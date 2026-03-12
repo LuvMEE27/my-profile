@@ -4,36 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Service Details | Khanh Hoang Vo</title>
+  <meta content="Detailed service offerings for website development, IT operations, and cybersecurity." name="description">
+  <meta content="website development, IT helpdesk, system administration, network administration, pentest, 24/7 support" name="keywords">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon-k.svg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="service-details-page">
@@ -42,139 +29,88 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.jpg" alt="Khanh Hoang Vo" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Võ Hoàng Khanh</h1>
+      <h1 class="sitename">Khanh Hoang Vo</h1>
     </a>
 
-        <div class="social-links text-center">
+    <div class="social-links text-center">
       <a href="https://www.facebook.com/LuvMEE27" target="_blank" rel="noopener noreferrer" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="https://www.instagram.com/_imhnahk/" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/luvmee27/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
+    <div class="lang-switch text-center" id="lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="vi">VI</button>
+    </div>
+
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i>About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i>Portfolio</a></li>
+        <li><a href="index.html#services" class="active"><i class="bi bi-hdd-stack navicon"></i>Services</a></li>
+        <li><a href="index.html#testimonials"><i class="bi bi-chat-quote navicon"></i>Testimonials</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
 
-    <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <h1 class="mb-2 mb-lg-0" id="page-title-text">Service Details</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
+            <li><a href="index.html" id="crumb-home">Home</a></li>
+            <li class="current" id="crumb-current">Service Details</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
-
       <div class="container">
-
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <a href="#" class="active">Web Design</a>
-              <a href="#">Software Development</a>
-              <a href="#">Product Management</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Marketing</a>
-            </div>
-
-            <h4>Enim qui eos rerum in delectus</h4>
-            <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
+            <div class="services-list" id="service-list-links"></div>
+            <h4 id="left-service-title"></h4>
+            <p id="left-service-desc"></p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
+            <img src="assets/img/services.jpg" alt="Service Detail" class="img-fluid services-img" id="service-image">
+            <h3 id="detail-title"></h3>
+            <p id="detail-lead"></p>
+            <ul id="detail-bullets"></ul>
+            <p id="detail-p1"></p>
+            <p id="detail-p2"></p>
           </div>
 
         </div>
-
       </div>
-
-    </section><!-- /Service Details Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>Â© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Khanh Hoang Vo</strong> <span id="footer-rights">All Rights Reserved</span></p>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -183,13 +119,320 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    (function () {
+      const i18n = {
+        en: {
+          pageTitle: 'Service Details | Khanh Hoang Vo',
+          nav: ['Home', 'About', 'Resume', 'Portfolio', 'Services', 'Testimonials', 'Contact'],
+          pageHeader: 'Service Details',
+          crumbHome: 'Home',
+          crumbCurrent: 'Service Details',
+          footerRights: 'All Rights Reserved',
+          services: [
+            {
+              id: 'website-development',
+              navLabel: 'Website Development',
+              leftTitle: 'Business websites built for growth',
+              leftDesc: 'From landing pages to full web platforms, we focus on speed, conversion, and maintainability.',
+              title: 'Website Development - End-to-end build and delivery',
+              lead: 'We transform business requirements into production-ready websites with clear architecture, reliable performance, and measurable user outcomes.',
+              bullets: [
+                'Discovery and planning with PM/BA to define scope, user flow, and milestones',
+                'Modern responsive front-end implementation with SEO and accessibility baseline',
+                'CMS integration or custom backend workflows based on operational needs',
+                'QA checklist, deployment pipeline, and post-launch optimization support'
+              ],
+              p1: 'Our delivery process balances design quality and technical scalability. We prioritize clean structure, maintainable code, and transparent progress updates throughout each sprint.',
+              p2: 'After go-live, we continue with analytics review, performance tuning, and iterative improvements so the website keeps delivering business value over time.'
+            },
+            {
+              id: 'it-helpdesk',
+              navLabel: 'IT Helpdesk',
+              leftTitle: 'Reliable daily IT support',
+              leftDesc: 'We provide fast response and structured incident handling to keep teams productive.',
+              title: 'IT Helpdesk - Operational support with clear SLA',
+              lead: 'Our helpdesk service covers day-to-day IT incidents, user issues, and routine requests with predictable response and escalation workflows.',
+              bullets: [
+                'End-user support for devices, accounts, connectivity, and software problems',
+                'Ticket intake, categorization, prioritization, and escalation tracking',
+                'Root-cause documentation and knowledge base update for recurring cases',
+                'Operational reporting for response time, resolution quality, and backlog control'
+              ],
+              p1: 'We align support workflow with your business hours and critical systems, ensuring urgent incidents are handled with the right priority and communication.',
+              p2: 'Our approach reduces repeated disruptions by combining fast troubleshooting with process standardization and preventive recommendations.'
+            },
+            {
+              id: 'system-administration',
+              navLabel: 'System Administration',
+              leftTitle: 'Stable system operations',
+              leftDesc: 'Server and service administration designed for uptime, security baseline, and continuity.',
+              title: 'System Administration - Secure and resilient infrastructure',
+              lead: 'We manage systems across provisioning, hardening, updates, backups, and reliability monitoring to support stable business operations.',
+              bullets: [
+                'Server setup, service baseline hardening, and health monitoring configuration',
+                'Access governance, permission model, and configuration lifecycle management',
+                'Patch and vulnerability lifecycle coordination with rollback strategy',
+                'Backup and disaster recovery testing to validate restore readiness'
+              ],
+              p1: 'System administration is not only maintenance; it is proactive risk management. We maintain documentation and change control to keep operations auditable and predictable.',
+              p2: 'By combining observability with preventive actions, we help reduce downtime and improve reliability across critical environments.'
+            },
+            {
+              id: 'network-administration',
+              navLabel: 'Network Administration',
+              leftTitle: 'Secure and optimized networking',
+              leftDesc: 'From segmentation to performance tuning, we keep your connectivity stable and controlled.',
+              title: 'Network Administration - Controlled connectivity at scale',
+              lead: 'We design and maintain network architecture that supports secure access, policy enforcement, and high availability for your teams and services.',
+              bullets: [
+                'VLAN and segmentation planning with risk-based zone design',
+                'Routing, firewall, and policy optimization for secure communication paths',
+                'VPN and branch integration with standardized access controls',
+                'Monitoring and tuning for latency, throughput, and link stability'
+              ],
+              p1: 'Our network workstream focuses on both performance and security posture. Every change is documented to ensure traceability and rapid troubleshooting.',
+              p2: 'We also help teams align network implementation with operational policy to reduce misconfiguration risk and improve incident response speed.'
+            },
+            {
+              id: 'penetration-testing',
+              navLabel: 'Penetration Testing',
+              leftTitle: 'Actionable security testing',
+              leftDesc: 'We identify exploitable weaknesses and provide practical remediation priorities.',
+              title: 'Penetration Testing - Risk validation and remediation support',
+              lead: 'Our pentest engagements simulate realistic attack paths and produce clear, prioritized findings to improve your security posture quickly.',
+              bullets: [
+                'Web/API and infrastructure penetration testing based on threat scenarios',
+                'Validated vulnerabilities with evidence and business impact rating',
+                'Remediation guidance split by quick fix, medium-term, and strategic control',
+                'Retest verification to confirm closure of high-risk findings'
+              ],
+              p1: 'We focus on helping engineering and operations teams understand risk in context, not only list technical issues.',
+              p2: 'The final output is designed for decision making: clear priorities, clear ownership, and clear next steps.'
+            },
+            {
+              id: 'maintenance-support',
+              navLabel: 'Maintenance & Support 24/7',
+              leftTitle: '24/7 maintenance and support',
+              leftDesc: 'Continuous monitoring, preventive care, and SLA-based support for always-on systems.',
+              title: 'Maintenance & Support 24/7 - Continuous operational assurance',
+              lead: 'We provide round-the-clock maintenance and support to keep your services available, secure, and updated without operational interruption.',
+              bullets: [
+                '24/7 monitoring and incident response with defined escalation matrix',
+                'Preventive maintenance, patch windows, and configuration hygiene checks',
+                'SLA reporting with transparency on response, resolution, and risk status',
+                'Monthly review for improvement plan and capacity tuning recommendations'
+              ],
+              p1: 'Our team combines operations discipline and security mindset to ensure systems remain healthy under changing workloads.',
+              p2: 'With proactive maintenance and reliable support availability, your team can focus on growth while we protect service continuity.'
+            }
+          ]
+        },
+        vi: {
+          pageTitle: 'Chi Tiết Dịch Vụ | Võ Hoàng Khanh',
+          nav: ['Trang chủ', 'Giới thiệu', 'Hồ sơ', 'Dự án', 'Dịch vụ', 'Đánh giá', 'Liên hệ'],
+          pageHeader: 'Chi tiết dịch vụ',
+          crumbHome: 'Trang chủ',
+          crumbCurrent: 'Chi tiết dịch vụ',
+          footerRights: 'Mọi quyền được bảo lưu',
+          services: [
+            {
+              id: 'website-development',
+              navLabel: 'Lập trình Website',
+              leftTitle: 'Website doanh nghiệp phục vụ tăng trưởng',
+              leftDesc: 'Từ landing page đến nền tảng web hoàn chỉnh, tối ưu tốc độ, chuyển đổi và khả năng mở rộng.',
+              title: 'Lập trình Website - Triển khai trọn gói từ ý tưởng đến vận hành',
+              lead: 'Chúng tôi chuyển hóa yêu cầu kinh doanh thành sản phẩm web sẵn sàng vận hành, kiến trúc rõ ràng, hiệu năng ổn định và đo lường được hiệu quả.',
+              bullets: [
+                'Khảo sát và lập kế hoạch cùng PM/BA để xác định phạm vi, luồng người dùng và mốc triển khai',
+                'Phát triển giao diện responsive, chuẩn SEO kỹ thuật và tiêu chuẩn truy cập',
+                'Tích hợp CMS hoặc backend theo đúng nhu cầu vận hành thực tế',
+                'Checklist QA, quy trình deploy và tối ưu sau khi go-live'
+              ],
+              p1: 'Quy trình triển khai cân bằng giữa chất lượng trải nghiệm và độ bền kỹ thuật. Chúng tôi ưu tiên cấu trúc rõ ràng, mã nguồn dễ bảo trì và cập nhật tiến độ minh bạch.',
+              p2: 'Sau khi bàn giao, đội ngũ tiếp tục theo dõi analytics, tối ưu hiệu năng và cải tiến theo dữ liệu thực tế để website mang lại giá trị bền vững.'
+            },
+            {
+              id: 'it-helpdesk',
+              navLabel: 'IT Helpdesk',
+              leftTitle: 'Hỗ trợ IT vận hành hằng ngày',
+              leftDesc: 'Phản hồi nhanh, xử lý sự cố có quy trình, giúp đội ngũ vận hành liên tục.',
+              title: 'IT Helpdesk - Hỗ trợ vận hành theo SLA rõ ràng',
+              lead: 'Dịch vụ helpdesk bao gồm xử lý sự cố hằng ngày, hỗ trợ người dùng và quản trị yêu cầu theo luồng tiếp nhận - phân loại - xử lý minh bạch.',
+              bullets: [
+                'Hỗ trợ người dùng cuối về thiết bị, tài khoản, kết nối và phần mềm',
+                'Tiếp nhận ticket, phân loại mức độ, ưu tiên và theo dõi escalation',
+                'Ghi nhận nguyên nhân gốc và cập nhật knowledge base cho lỗi lặp lại',
+                'Báo cáo vận hành theo chỉ số phản hồi, chất lượng xử lý và tồn đọng'
+              ],
+              p1: 'Chúng tôi điều chỉnh quy trình hỗ trợ theo giờ hoạt động và mức độ quan trọng của hệ thống, đảm bảo sự cố khẩn cấp được xử lý đúng ưu tiên.',
+              p2: 'Mục tiêu không chỉ là xử lý nhanh mà còn giảm lỗi lặp lại thông qua chuẩn hóa quy trình và đề xuất phòng ngừa.'
+            },
+            {
+              id: 'system-administration',
+              navLabel: 'Quản trị hệ thống',
+              leftTitle: 'Hệ thống ổn định và an toàn',
+              leftDesc: 'Quản trị máy chủ và dịch vụ theo chuẩn vận hành, backup và liên tục dịch vụ.',
+              title: 'Quản trị hệ thống - Hạ tầng an toàn, bền vững',
+              lead: 'Chúng tôi quản trị hệ thống theo chuỗi đầy đủ: cấu hình, hardening, cập nhật, backup và giám sát để đảm bảo vận hành ổn định.',
+              bullets: [
+                'Thiết lập máy chủ, chuẩn hóa cấu hình và giám sát sức khỏe dịch vụ',
+                'Quản trị định danh, phân quyền và vòng đời cấu hình',
+                'Điều phối bản vá, xử lý lỗ hổng và phương án rollback an toàn',
+                'Kiểm thử phục hồi backup và nâng cao năng lực DR'
+              ],
+              p1: 'Quản trị hệ thống là nền tảng để giảm rủi ro gián đoạn dịch vụ. Chúng tôi duy trì tài liệu và lịch sử thay đổi đầy đủ để dễ kiểm soát.',
+              p2: 'Nhờ kết hợp giám sát chủ động và hành động phòng ngừa, độ sẵn sàng của hệ thống được nâng cao rõ rệt.'
+            },
+            {
+              id: 'network-administration',
+              navLabel: 'Quản trị mạng',
+              leftTitle: 'Mạng an toàn và tối ưu kết nối',
+              leftDesc: 'Thiết kế và vận hành mạng theo mô hình phân đoạn, hiệu năng và kiểm soát truy cập.',
+              title: 'Quản trị mạng - Kết nối ổn định, chính sách chặt chẽ',
+              lead: 'Chúng tôi thiết kế và duy trì kiến trúc mạng hỗ trợ truy cập an toàn, thực thi chính sách và duy trì hiệu năng cao cho vận hành doanh nghiệp.',
+              bullets: [
+                'Thiết kế VLAN, phân đoạn mạng theo rủi ro và nhu cầu dịch vụ',
+                'Tối ưu routing, firewall rule và luồng giao tiếp liên vùng',
+                'Thiết lập VPN, kết nối chi nhánh và chuẩn hóa chính sách truy cập',
+                'Giám sát độ trễ, băng thông và tối ưu ổn định đường truyền'
+              ],
+              p1: 'Luồng công việc mạng luôn cân bằng giữa hiệu năng và bảo mật. Mọi thay đổi đều được ghi nhận để đảm bảo khả năng truy vết và xử lý sự cố nhanh.',
+              p2: 'Chúng tôi hỗ trợ đồng bộ vận hành mạng với quy trình nội bộ nhằm giảm lỗi cấu hình và tăng tốc phản ứng khi có sự cố.'
+            },
+            {
+              id: 'penetration-testing',
+              navLabel: 'Kiểm thử xâm nhập',
+              leftTitle: 'Kiểm thử bảo mật có tính hành động',
+              leftDesc: 'Phát hiện lỗ hổng có thể khai thác và đưa ra lộ trình khắc phục thực tế.',
+              title: 'Kiểm thử xâm nhập - Xác thực rủi ro và hỗ trợ khắc phục',
+              lead: 'Các đợt pentest được xây dựng theo tình huống tấn công thực tế, giúp đội ngũ kỹ thuật nhận diện điểm yếu trọng yếu và xử lý đúng ưu tiên.',
+              bullets: [
+                'Kiểm thử web/API và hạ tầng theo kịch bản đe dọa cụ thể',
+                'Xác thực lỗ hổng kèm bằng chứng và mức ảnh hưởng tới nghiệp vụ',
+                'Lộ trình khắc phục phân theo quick-fix, trung hạn và kiểm soát dài hạn',
+                'Retest sau khắc phục để xác nhận đóng lỗ hổng hiệu quả'
+              ],
+              p1: 'Chúng tôi không chỉ liệt kê lỗ hổng mà còn giải thích rủi ro theo bối cảnh kinh doanh để giúp ra quyết định nhanh.',
+              p2: 'Báo cáo cuối cùng tập trung vào tính khả thi: ưu tiên rõ ràng, trách nhiệm rõ ràng và bước triển khai cụ thể.'
+            },
+            {
+              id: 'maintenance-support',
+              navLabel: 'Bảo trì & Hỗ trợ 24/7',
+              leftTitle: 'Bảo trì và hỗ trợ liên tục 24/7',
+              leftDesc: 'Giám sát chủ động, cập nhật định kỳ và hỗ trợ theo SLA để hệ thống luôn sẵn sàng.',
+              title: 'Bảo trì & Hỗ trợ 24/7 - Đảm bảo vận hành liên tục',
+              lead: 'Chúng tôi cung cấp dịch vụ bảo trì và hỗ trợ xuyên suốt để hệ thống luôn sẵn sàng, an toàn và cập nhật mà không làm gián đoạn hoạt động.',
+              bullets: [
+                'Giám sát 24/7 và phản ứng sự cố theo ma trận escalation',
+                'Bảo trì định kỳ, cập nhật bản vá và kiểm tra cấu hình an toàn',
+                'Báo cáo SLA minh bạch về phản hồi, xử lý và trạng thái rủi ro',
+                'Rà soát định kỳ để tối ưu liên tục theo nhu cầu vận hành thực tế'
+              ],
+              p1: 'Đội ngũ kết hợp kỷ luật vận hành và tư duy bảo mật để hệ thống luôn ổn định trước các biến động tải và rủi ro mới.',
+              p2: 'Nhờ mô hình hỗ trợ liên tục, doanh nghiệp có thể tập trung vào tăng trưởng trong khi nền tảng kỹ thuật vẫn được bảo vệ và duy trì chủ động.'
+            }
+          ]
+        }
+      };
+
+      const navHrefs = ['index.html#hero', 'index.html#about', 'index.html#resume', 'index.html#portfolio', 'index.html#services', 'index.html#testimonials', 'index.html#contact'];
+      let currentLang = 'en';
+
+      function setNav(labels) {
+        navHrefs.forEach((href, i) => {
+          const a = document.querySelector(`#navmenu a[href="${href}"]`);
+          if (!a || !labels[i]) return;
+          const icon = a.querySelector('i');
+          a.innerHTML = '';
+          if (icon) a.appendChild(icon);
+          a.append(' ' + labels[i]);
+        });
+      }
+
+      function renderServiceList(services, selectedId) {
+        const list = document.getElementById('service-list-links');
+        list.innerHTML = '';
+
+        services.forEach((svc, idx) => {
+          const a = document.createElement('a');
+          a.href = `#${svc.id}`;
+          a.textContent = svc.navLabel;
+          if ((selectedId && svc.id === selectedId) || (!selectedId && idx === 0)) {
+            a.classList.add('active');
+          }
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            history.replaceState(null, '', `#${svc.id}`);
+            renderServiceDetail(svc.id);
+          });
+          list.appendChild(a);
+        });
+      }
+
+      function renderServiceDetail(serviceId) {
+        const t = i18n[currentLang];
+        const services = t.services;
+        const selected = services.find((s) => s.id === serviceId) || services[0];
+
+        document.getElementById('left-service-title').textContent = selected.leftTitle;
+        document.getElementById('left-service-desc').textContent = selected.leftDesc;
+        document.getElementById('detail-title').textContent = selected.title;
+        document.getElementById('detail-lead').textContent = selected.lead;
+        document.getElementById('detail-p1').textContent = selected.p1;
+        document.getElementById('detail-p2').textContent = selected.p2;
+
+        const ul = document.getElementById('detail-bullets');
+        ul.innerHTML = '';
+        selected.bullets.forEach((b) => {
+          const li = document.createElement('li');
+          li.innerHTML = '<i class="bi bi-check-circle"></i><span></span>';
+          li.querySelector('span').textContent = b;
+          ul.appendChild(li);
+        });
+
+        renderServiceList(services, selected.id);
+      }
+
+      function applyLang(lang) {
+        currentLang = i18n[lang] ? lang : 'en';
+        const t = i18n[currentLang];
+
+        document.documentElement.lang = currentLang;
+        document.title = t.pageTitle;
+        setNav(t.nav);
+
+        document.getElementById('page-title-text').textContent = t.pageHeader;
+        document.getElementById('crumb-home').textContent = t.crumbHome;
+        document.getElementById('crumb-current').textContent = t.crumbCurrent;
+        document.getElementById('footer-rights').textContent = t.footerRights;
+
+        const hash = (window.location.hash || '').replace('#', '');
+        renderServiceDetail(hash);
+
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.lang === currentLang);
+        });
+
+        localStorage.setItem('site_lang', currentLang);
+      }
+
+      window.addEventListener('hashchange', () => {
+        const hash = (window.location.hash || '').replace('#', '');
+        if (hash) renderServiceDetail(hash);
+      });
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+      });
+
+      applyLang(localStorage.getItem('site_lang') || 'en');
+    })();
+  </script>
 
 </body>
 
 </html>
-
-
 

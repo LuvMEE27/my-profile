@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Template Name: iPortfolio
 * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
 * Updated: Jun 29 2024 with Bootstrap v5.3.3
@@ -92,18 +92,39 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+  window.initHeroTyped = function(stringsInput) {
+    const typedElement = document.querySelector('.typed');
+    if (!typedElement || typeof Typed === 'undefined') return;
+
+    if (window.heroTyped && typeof window.heroTyped.destroy === 'function') {
+      window.heroTyped.destroy();
+    }
+
+    const typedStrings = Array.isArray(stringsInput)
+      ? stringsInput
+      : String(stringsInput || typedElement.getAttribute('data-typed-items') || '')
+          .split(',')
+          .map((s) => s.trim())
+          .filter(Boolean);
+
+    if (!typedStrings.length) return;
+
+    const singleLine = typedStrings.length === 1;
+
+    window.heroTyped = new Typed('.typed', {
+      strings: typedStrings,
+      loop: !singleLine,
+      typeSpeed: 72,
+      backSpeed: 28,
+      backDelay: 1800,
+      startDelay: 80,
+      smartBackspace: !singleLine,
+      showCursor: true,
+      contentType: 'null'
     });
-  }
+  };
+
+  window.initHeroTyped();
 
   /**
    * Initiate Pure Counter
@@ -227,3 +248,7 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+
