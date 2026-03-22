@@ -10,6 +10,70 @@
   "use strict";
 
   /**
+   * Shared site preferences
+   */
+  window.sitePrefs = window.sitePrefs || {
+    get(key, fallback = null) {
+      try {
+        const value = localStorage.getItem(key);
+        return value === null ? fallback : value;
+      } catch (error) {
+        return fallback;
+      }
+    },
+    set(key, value) {
+      try {
+        localStorage.setItem(key, value);
+      } catch (error) {
+        // Ignore storage restrictions and keep the UI working.
+      }
+    }
+  };
+
+  function resolveTheme() {
+    const storedTheme = window.sitePrefs.get('site_theme');
+    if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function refreshThemeToggle(theme) {
+    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+      const icon = button.querySelector('i');
+      const isDark = theme === 'dark';
+      const nextLabel = isDark
+        ? (button.getAttribute('data-label-light') || 'Light mode')
+        : (button.getAttribute('data-label-dark') || 'Dark mode');
+      button.setAttribute('aria-pressed', String(isDark));
+      button.setAttribute('data-theme-current', theme);
+      button.setAttribute('aria-label', nextLabel);
+      button.setAttribute('title', nextLabel);
+      if (icon) {
+        icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+      }
+    });
+  }
+
+  window.applySiteTheme = function(theme, persist = true) {
+    const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', resolvedTheme);
+    document.body.setAttribute('data-theme', resolvedTheme);
+    refreshThemeToggle(resolvedTheme);
+    if (persist) {
+      window.sitePrefs.set('site_theme', resolvedTheme);
+    }
+  };
+
+  window.applySiteTheme(resolveTheme(), false);
+
+  document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      window.applySiteTheme(nextTheme);
+    });
+  });
+
+  /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');

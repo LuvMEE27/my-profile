@@ -4,36 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Portfolio Details | Khanh Hoang Vo</title>
+  <meta content="Detailed portfolio projects by Khanh Hoang Vo and team." name="description">
+  <meta content="portfolio, website project, lctvisuals, bfproductions, cosmetics, bookstore" name="keywords">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon-k.svg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('site_theme');
+        var resolvedTheme = (storedTheme === 'light' || storedTheme === 'dark')
+          ? storedTheme
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -42,46 +43,39 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.jpg" alt="Khanh Hoang Vo" class="img-fluid rounded-circle" id="profile-image">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Khanh Hoang Vo</h1>
     </a>
 
-        <div class="social-links text-center">
+    <div class="social-links text-center">
       <a href="https://www.facebook.com/LuvMEE27" target="_blank" rel="noopener noreferrer" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="https://www.instagram.com/_imhnahk/" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/luvmee27/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
+    <div class="lang-switch text-center" id="lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="vi">VI</button>
+    </div>
+
+    <div class="theme-switch text-center">
+      <button type="button" class="theme-btn" data-theme-toggle data-label-light="Light mode" data-label-dark="Dark mode" aria-label="Toggle color theme" aria-pressed="false">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+    </div>
+
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i>About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Resume</a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i>Portfolio</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i>Services</a></li>
+        <li><a href="index.html#testimonials"><i class="bi bi-chat-quote navicon"></i>Testimonials</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
       </ul>
     </nav>
 
@@ -89,120 +83,87 @@
 
   <main class="main">
 
-    <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0" id="page-title-text">Portfolio Details</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html" id="crumb-home">Home</a></li>
+            <li class="current" id="crumb-current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list" id="project-list-links">
+              <a href="#lctvisuals" data-project-id="lctvisuals" class="active">LCT Visuals</a>
+              <a href="#bfproductions" data-project-id="bfproductions">BF Productions</a>
+              <a href="#pentest-smb" data-project-id="pentest-smb">SMB Pentest</a>
+              <a href="#system-network-smb" data-project-id="system-network-smb">SMB System &amp; Network</a>
             </div>
-          </div>
+            <div class="detail-sidebar-copy">
+              <h4 id="project-left-title">Creative studio website</h4>
+              <p id="project-left-desc">A brand-focused website to present visuals, portfolio, and service value professionally.</p>
+            </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="220">
+              <h3 id="project-info-title">Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong id="label-category">Category</strong>: <span id="project-category">Business Website</span></li>
+                <li><strong id="label-client">Client</strong>: <span id="project-client">LCT Visuals</span></li>
+                <li><strong id="label-date">Project Date</strong>: <span id="project-date">2025</span></li>
+                <li><strong id="label-url">Project URL</strong>: <a href="https://lctvisuals.us" id="project-url" target="_blank" rel="noopener noreferrer">https://lctvisuals.us</a></li>
               </ul>
             </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+
+            <div class="detail-contact-card" data-aos="fade-up" data-aos-delay="280">
+              <h3 id="detail-contact-title">Need a similar project?</h3>
+              <p id="detail-contact-desc">Let's discuss your website, infrastructure, or cybersecurity requirements.</p>
+              <a href="mailto:khanhvh2728@gmail.com" class="detail-contact-btn" id="detail-contact-btn">Book a Consultation</a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/portfolio/app-1.jpg" alt="Project" class="img-fluid services-img" id="project-image">
+
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="260">
+              <h2 id="project-title">LCT Visuals - Brand-first website execution</h2>
+              <p id="project-p1">This project focused on translating a visual brand identity into a clean and modern web experience. The website emphasizes clarity, speed, and portfolio storytelling.</p>
+              <ul id="project-bullets">
+                <li><i class="bi bi-check-circle"></i> <span>Service structure and portfolio layout optimized for conversion</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Responsive build for smooth desktop and mobile experience</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>SEO-ready architecture and performance tuning</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Clear CTA flow for inquiries and client engagement</span></li>
+              </ul>
+              <p id="project-p2">The final product helps the studio present work more professionally while improving lead quality from online visitors.</p>
             </div>
           </div>
 
         </div>
-
       </div>
-
-    </section><!-- /Portfolio Details Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>Â© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Khanh Hoang Vo</strong> <span id="footer-rights">All Rights Reserved</span></p>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -211,13 +172,394 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const i18n = {
+      en: {
+        pageTitle: 'Portfolio Details | Khanh Hoang Vo',
+        nameDisplay: 'Khanh Hoang Vo',
+        profileAlt: 'Khanh Hoang Vo',
+        nav: ['Home', 'About', 'Resume', 'Portfolio', 'Services', 'Testimonials', 'Contact'],
+        pageHeader: 'Portfolio Details',
+        crumbHome: 'Home',
+        crumbCurrent: 'Portfolio Details',
+        footerRights: 'All Rights Reserved',
+        themeLabels: { dark: 'Dark mode', light: 'Light mode' },
+        contactTitle: 'Need a similar project?',
+        contactDesc: "Let's discuss your website, infrastructure, or cybersecurity requirements.",
+        contactBtn: 'Book a Consultation',
+        labels: {
+          infoTitle: 'Project Information',
+          category: 'Category',
+          client: 'Client',
+          date: 'Project Date',
+          url: 'Project URL'
+        },
+        projects: [
+          {
+            id: 'lctvisuals',
+            navLabel: 'LCT Visuals',
+            leftTitle: 'Creative studio website',
+            leftDesc: 'A brand-focused website to present visuals, portfolio, and service value professionally.',
+            image: 'assets/img/portfolio/app-1.jpg',
+            category: 'Business Website',
+            client: 'LCT Visuals',
+            date: '2025',
+            url: 'https://lctvisuals.us',
+            title: 'LCT Visuals - Brand-first website execution',
+            p1: 'This project focused on translating a visual brand identity into a clean and modern web experience. The website emphasizes clarity, speed, and portfolio storytelling.',
+            bullets: [
+              'Service structure and portfolio layout optimized for conversion',
+              'Responsive build for smooth desktop and mobile experience',
+              'SEO-ready architecture and performance tuning',
+              'Clear CTA flow for inquiries and client engagement'
+            ],
+            p2: 'The final product helps the studio present work more professionally while improving lead quality from online visitors.'
+          },
+          {
+            id: 'bfproductions',
+            navLabel: 'BF Productions',
+            leftTitle: 'Production company website',
+            leftDesc: 'A corporate website built to showcase services, profile, and collaboration process.',
+            image: 'assets/img/portfolio/product-1.jpg',
+            category: 'Corporate Website',
+            client: 'BF Productions',
+            date: '2025',
+            url: 'https://bfproductions.co',
+            title: 'BF Productions - Corporate presence and trust-building',
+            p1: 'The objective was to build a structured, premium-looking company website that communicates service capability and reliability for partners.',
+            bullets: [
+              'Information architecture optimized for business presentation',
+              'Visual hierarchy refined for trust and readability',
+              'Fast-loading media handling and content organization',
+              'Scalable structure for future pages and campaigns'
+            ],
+            p2: 'This implementation strengthened brand credibility and provided a solid digital foundation for future marketing activities.'
+          },
+          {
+            id: 'pentest-smb',
+            navLabel: 'SMB Pentest',
+            leftTitle: 'Security assessment for an SMB environment',
+            leftDesc: 'A full-scope penetration testing engagement to identify exploitable risks and define a remediation roadmap.',
+            image: 'assets/img/portfolio/pentest.webp',
+            category: 'Cybersecurity / Pentest',
+            client: 'SMB Company',
+            date: '2025',
+            url: '#',
+            title: 'SMB Penetration Testing - Risk validation and hardening plan',
+            p1: 'This project focused on testing real attack paths across web endpoints and internal infrastructure for a small-to-medium business environment.',
+            bullets: [
+              'External and internal attack surface mapping with risk-based prioritization',
+              'Web/API vulnerability validation including authentication and session flows',
+              'Privilege escalation and lateral movement checks on critical assets',
+              'Remediation playbook with quick fixes, medium-term controls, and retest support'
+            ],
+            p2: 'The engagement helped the client reduce critical exposure quickly and establish a more mature security baseline for future operations.'
+          },
+          {
+            id: 'system-network-smb',
+            navLabel: 'SMB System & Network',
+            leftTitle: 'System and network operations modernization',
+            leftDesc: 'A stabilization project for server operations, segmentation, and secure connectivity in an SMB setup.',
+            image: 'assets/img/portfolio/system-network.jpg',
+            category: 'System & Network Administration',
+            client: 'SMB Company',
+            date: '2025',
+            url: '#',
+            title: 'SMB System & Network Operations - Reliability and control uplift',
+            p1: 'This project improved service stability and policy governance by redesigning server operations and core network controls for a growing SMB.',
+            bullets: [
+              'System baseline hardening, patch process, and backup policy refinement',
+              'Network segmentation with firewall rule cleanup and access governance',
+              'Monitoring setup for server health, link quality, and incident visibility',
+              'Operational documentation and handover workflow for internal IT team'
+            ],
+            p2: 'The result delivered better uptime, stronger access control, and clearer day-to-day operations for the client internal team.'
+          }
+        ]
+      },
+      vi: {
+        pageTitle: 'Chi tiết Dịch vụ | Võ Hoàng Khanh',
+        nameDisplay: 'Võ Hoàng Khanh',
+        profileAlt: 'Võ Hoàng Khanh',
+        nav: ['Trang chủ', 'Giới thiệu', 'Hồ sơ', 'Dự án', 'Dịch vụ', 'Đánh giá', 'Liên hệ'],
+        pageHeader: 'Chi tiết dự án',
+        crumbHome: 'Trang chủ',
+        crumbCurrent: 'Chi tiết dự án',
+        footerRights: 'Mọi quyền được bảo lưu',
+        themeLabels: { dark: 'Chế độ tối', light: 'Chế độ sáng' },
+        contactTitle: 'Cần triển khai dự án tương tự?',
+        contactDesc: 'Hãy trao đổi cùng tôi về website, hạ tầng hoặc nhu cầu an ninh mạng của bạn.',
+        contactBtn: 'Liên hệ tư vấn',
+        labels: {
+          infoTitle: 'Thông tin dự án',
+          category: 'Danh mục',
+          client: 'Khách hàng',
+          date: 'Thời gian',
+          url: 'Liên kết dự án'
+        },
+        projects: [
+          {
+            id: 'lctvisuals',
+            navLabel: 'LCT Visuals',
+            leftTitle: 'Website studio sáng tạo',
+            leftDesc: 'Website tập trung thương hiệu để giới thiệu portfolio và dịch vụ một cách chuyên nghiệp.',
+            image: 'assets/img/portfolio/app-1.jpg',
+            category: 'Website doanh nghiệp',
+            client: 'LCT Visuals',
+            date: '2025',
+            url: 'https://lctvisuals.us',
+            title: 'LCT Visuals - Triển khai website theo định hướng thương hiệu',
+            p1: 'Dự án tập trung chuyển tải nhận diện thương hiệu hình ảnh thành trải nghiệm web hiện đại, rõ ràng và tốc độ cao.',
+            bullets: [
+              'Cấu trúc dịch vụ và portfolio tối ưu cho chuyển đổi',
+              'Giao diện responsive mượt trên desktop và mobile',
+              'Nền tảng chuẩn SEO kỹ thuật và tối ưu hiệu năng',
+              'Luồng CTA rõ ràng cho tư vấn và liên hệ khách hàng'
+            ],
+            p2: 'Sản phẩm cuối giúp studio thể hiện năng lực chuyên nghiệp hơn và cải thiện chất lượng lead từ website.'
+          },
+          {
+            id: 'bfproductions',
+            navLabel: 'BF Productions',
+            leftTitle: 'Website công ty sản xuất',
+            leftDesc: 'Website doanh nghiệp để trình bày năng lực dịch vụ và quy trình làm việc với đối tác.',
+            image: 'assets/img/portfolio/product-1.jpg',
+            category: 'Website công ty',
+            client: 'BF Productions',
+            date: '2025',
+            url: 'https://bfproductions.co',
+            title: 'BF Productions - Xây dựng hiện diện doanh nghiệp chuyên nghiệp',
+            p1: 'Mục tiêu dự án là xây dựng website có bố cục rõ ràng, hình ảnh cao cấp và thể hiện độ tin cậy cao cho đối tác.',
+            bullets: [
+              'Kiến trúc thông tin tối ưu cho phần giới thiệu doanh nghiệp',
+              'Tổ chức thị giác rõ ràng, tăng độ dễ đọc và cảm nhận tin cậy',
+              'Xử lý media và nội dung để tải nhanh, ổn định',
+              'Cấu trúc sẵn sàng mở rộng cho chiến dịch tương lai'
+            ],
+            p2: 'Dự án giúp củng cố uy tín thương hiệu số và tạo nền tảng tốt cho các hoạt động marketing tiếp theo.'
+          },
+          {
+            id: 'pentest-smb',
+            navLabel: 'Pentest SMB',
+            leftTitle: 'Đánh giá bảo mật cho doanh nghiệp SMB',
+            leftDesc: 'Dự án kiểm thử xâm nhập toàn diện nhằm phát hiện rủi ro có thể khai thác và xây dựng lộ trình khắc phục.',
+            image: 'assets/img/portfolio/pentest.webp',
+            category: 'An ninh mạng / Pentest',
+            client: 'SMB Company',
+            date: '2025',
+            url: '#',
+            title: 'Pentest SMB - Xác thực rủi ro và kế hoạch gia cố bảo mật',
+            p1: 'Dự án tập trung mô phỏng đường tấn công thực tế trên các endpoint web và hạ tầng nội bộ của môi trường SMB.',
+            bullets: [
+              'Lập bản đồ bề mặt tấn công trong và ngoài theo mức độ rủi ro',
+              'Xác thực lỗ hổng web API, bao gồm xác thực và quản lý phiên',
+              'Kiểm tra khả năng leo thang đặc quyền và di chuyển ngang',
+              'Xây dựng playbook khắc phục theo quick-fix, trung hạn và retest'
+            ],
+            p2: 'Kết quả giúp khách hàng giảm nhanh các điểm rủi ro nghiêm trọng và nâng mặt bằng an ninh cho vận hành lâu dài.'
+          },
+          {
+            id: 'system-network-smb',
+            navLabel: 'System & Network SMB',
+            leftTitle: 'Nâng cấp vận hành hệ thống và mạng',
+            leftDesc: 'Dự án chuẩn hóa máy chủ, phân đoạn mạng và kiểm soát truy cập cho doanh nghiệp SMB đang mở rộng.',
+            image: 'assets/img/portfolio/system-network.jpg',
+            category: 'Quản trị hệ thống & mạng',
+            client: 'SMB Company',
+            date: '2025',
+            url: '#',
+            title: 'System & Network SMB - Nâng độ ổn định và kiểm soát vận hành',
+            p1: 'Dự án giúp cải thiện độ ổn định dịch vụ và năng lực kiểm soát chính sách bằng cách tái thiết kế vận hành hệ thống cùng lõi hạ tầng mạng.',
+            bullets: [
+              'Gia cố baseline hệ thống, quy trình bản vá và chính sách backup',
+              'Phân đoạn mạng, làm sạch firewall rule và chuẩn hóa quản trị truy cập',
+              'Thiết lập giám sát sức khỏe server, chất lượng kết nối và sự cố',
+              'Hoàn thiện tài liệu vận hành và quy trình bàn giao cho đội IT nội bộ'
+            ],
+            p2: 'Kết quả cuối cùng mang lại uptime tốt hơn, kiểm soát truy cập chặt hơn và vận hành hằng ngày rõ ràng hơn cho khách hàng.'
+          }
+        ]
+      }
+    };
+
+    const navHrefs = ['index.html#hero', 'index.html#about', 'index.html#resume', 'index.html#portfolio', 'index.html#services', 'index.html#testimonials', 'index.html#contact'];
+    const dom = {
+      list: document.getElementById('project-list-links'),
+      titleLeft: document.getElementById('project-left-title'),
+      descLeft: document.getElementById('project-left-desc'),
+      image: document.getElementById('project-image'),
+      infoTitle: document.getElementById('project-info-title'),
+      category: document.getElementById('project-category'),
+      client: document.getElementById('project-client'),
+      date: document.getElementById('project-date'),
+      url: document.getElementById('project-url'),
+      title: document.getElementById('project-title'),
+      p1: document.getElementById('project-p1'),
+      p2: document.getElementById('project-p2'),
+      bullets: document.getElementById('project-bullets')
+    };
+    let currentLang = 'en';
+
+    function getStoredLang() {
+      try { return localStorage.getItem('site_lang') || 'en'; } catch (e) { return 'en'; }
+    }
+
+    function setStoredLang(lang) {
+      try { localStorage.setItem('site_lang', lang); } catch (e) {}
+    }
+
+    function setNav(labels) {
+      navHrefs.forEach(function (href, index) {
+        const link = document.querySelector('#navmenu a[href="' + href + '"]');
+        if (!link || !labels[index]) return;
+        const icon = link.querySelector('i');
+        link.innerHTML = '';
+        if (icon) link.appendChild(icon);
+        link.append(' ' + labels[index]);
+      });
+    }
+
+    function getProjectId() {
+      const hash = (window.location.hash || '').replace('#', '');
+      const projects = i18n[currentLang].projects;
+      const found = projects.find(function (project) { return project.id === hash; });
+      return found ? found.id : projects[0].id;
+    }
+
+    function renderProjectList() {
+      const projects = i18n[currentLang].projects;
+      const activeId = getProjectId();
+      dom.list.innerHTML = '';
+      projects.forEach(function (project) {
+        const link = document.createElement('a');
+        link.href = '#' + project.id;
+        link.dataset.projectId = project.id;
+        link.textContent = project.navLabel;
+        if (project.id === activeId) link.classList.add('active');
+        link.addEventListener('click', function () {
+          renderProject(project.id);
+        });
+        dom.list.appendChild(link);
+      });
+    }
+
+    function renderProject(projectId) {
+      const projects = i18n[currentLang].projects;
+      const project = projects.find(function (item) { return item.id === projectId; }) || projects[0];
+
+      try {
+        if ((window.location.hash || '').replace('#', '') !== project.id) {
+          window.location.hash = project.id;
+        }
+      } catch (e) {}
+
+      dom.titleLeft.textContent = project.leftTitle;
+      dom.descLeft.textContent = project.leftDesc;
+      dom.image.src = project.image;
+      dom.image.alt = project.navLabel;
+      dom.category.textContent = project.category;
+      dom.client.textContent = project.client;
+      dom.date.textContent = project.date;
+      dom.title.textContent = project.title;
+      dom.p1.textContent = project.p1;
+      dom.p2.textContent = project.p2;
+
+      if (project.url && project.url !== '#') {
+        dom.url.textContent = project.url;
+        dom.url.href = project.url;
+        dom.url.target = '_blank';
+        dom.url.rel = 'noopener noreferrer';
+        dom.url.classList.remove('is-disabled');
+      } else {
+        dom.url.textContent = 'N/A';
+        dom.url.removeAttribute('href');
+        dom.url.removeAttribute('target');
+        dom.url.removeAttribute('rel');
+        dom.url.classList.add('is-disabled');
+      }
+
+      dom.bullets.innerHTML = '';
+      project.bullets.forEach(function (bullet) {
+        const li = document.createElement('li');
+        li.innerHTML = '<i class="bi bi-check-circle"></i> <span></span>';
+        li.querySelector('span').textContent = bullet;
+        dom.bullets.appendChild(li);
+      });
+
+      dom.list.querySelectorAll('a').forEach(function (link) {
+        link.classList.toggle('active', link.dataset.projectId === project.id);
+      });
+    }
+
+    function applyLang(lang) {
+      currentLang = i18n[lang] ? lang : 'en';
+      const t = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.title = t.pageTitle;
+      setNav(t.nav);
+      document.querySelectorAll('.sitename').forEach(function (el) {
+        el.textContent = t.nameDisplay;
+      });
+      document.getElementById('profile-image').alt = t.profileAlt;
+      document.getElementById('page-title-text').textContent = t.pageHeader;
+      document.getElementById('crumb-home').textContent = t.crumbHome;
+      document.getElementById('crumb-current').textContent = t.crumbCurrent;
+      document.getElementById('footer-rights').textContent = t.footerRights;
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (button) {
+        button.setAttribute('data-label-dark', t.themeLabels.dark);
+        button.setAttribute('data-label-light', t.themeLabels.light);
+      });
+      if (typeof window.applySiteTheme === 'function') {
+        window.applySiteTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+      }
+      document.getElementById('detail-contact-title').textContent = t.contactTitle;
+      document.getElementById('detail-contact-desc').textContent = t.contactDesc;
+      document.getElementById('detail-contact-btn').textContent = t.contactBtn;
+      document.getElementById('project-info-title').textContent = t.labels.infoTitle;
+      document.getElementById('label-category').textContent = t.labels.category;
+      document.getElementById('label-client').textContent = t.labels.client;
+      document.getElementById('label-date').textContent = t.labels.date;
+      document.getElementById('label-url').textContent = t.labels.url;
+
+      renderProjectList();
+      renderProject(getProjectId());
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+
+      setStoredLang(currentLang);
+    }
+
+    window.addEventListener('hashchange', function () {
+      renderProject(getProjectId());
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyLang(btn.dataset.lang);
+      });
+    });
+
+    applyLang(getStoredLang());
+  });
+</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
 
 
 

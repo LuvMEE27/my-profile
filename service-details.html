@@ -13,7 +13,21 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('site_theme');
+        var resolvedTheme = (storedTheme === 'light' || storedTheme === 'dark')
+          ? storedTheme
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -29,7 +43,7 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="Khanh Hoang Vo" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.jpg" alt="Khanh Hoang Vo" class="img-fluid rounded-circle" id="profile-image">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -45,6 +59,12 @@
     <div class="lang-switch text-center" id="lang-switcher">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="vi">VI</button>
+    </div>
+
+    <div class="theme-switch text-center">
+      <button type="button" class="theme-btn" data-theme-toggle data-label-light="Light mode" data-label-dark="Dark mode" aria-label="Toggle color theme" aria-pressed="false">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -80,17 +100,26 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list" id="service-list-links"></div>
-            <h4 id="left-service-title"></h4>
-            <p id="left-service-desc"></p>
+            <div class="detail-sidebar-copy">
+              <h4 id="left-service-title"></h4>
+              <p id="left-service-desc"></p>
+            </div>
+            <div class="detail-contact-card">
+              <h3 id="detail-contact-title">Need a custom service plan?</h3>
+              <p id="detail-contact-desc">I can help you combine website, IT operations, system, network, and security services into one delivery model.</p>
+              <a href="mailto:khanhvh2728@gmail.com" class="detail-contact-btn" id="detail-contact-btn">Request a Consultation</a>
+            </div>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/img/services.jpg" alt="Service Detail" class="img-fluid services-img" id="service-image">
-            <h3 id="detail-title"></h3>
-            <p id="detail-lead"></p>
-            <ul id="detail-bullets"></ul>
-            <p id="detail-p1"></p>
-            <p id="detail-p2"></p>
+            <div class="detail-content-card">
+              <h3 id="detail-title"></h3>
+              <p id="detail-lead"></p>
+              <ul id="detail-bullets"></ul>
+              <p id="detail-p1"></p>
+              <p id="detail-p2"></p>
+            </div>
           </div>
 
         </div>
@@ -126,11 +155,17 @@
       const i18n = {
         en: {
           pageTitle: 'Service Details | Khanh Hoang Vo',
+          nameDisplay: 'Khanh Hoang Vo',
+          profileAlt: 'Khanh Hoang Vo',
           nav: ['Home', 'About', 'Resume', 'Portfolio', 'Services', 'Testimonials', 'Contact'],
           pageHeader: 'Service Details',
           crumbHome: 'Home',
           crumbCurrent: 'Service Details',
           footerRights: 'All Rights Reserved',
+          themeLabels: { dark: 'Dark mode', light: 'Light mode' },
+          contactTitle: 'Need a custom service plan?',
+          contactDesc: 'I can help you combine website, IT operations, system, network, and security services into one delivery model.',
+          contactBtn: 'Request a Consultation',
           services: [
             {
               id: 'website-development',
@@ -232,11 +267,17 @@
         },
         vi: {
           pageTitle: 'Chi Tiết Dịch Vụ | Võ Hoàng Khanh',
+          nameDisplay: 'Võ Hoàng Khanh',
+          profileAlt: 'Võ Hoàng Khanh',
           nav: ['Trang chủ', 'Giới thiệu', 'Hồ sơ', 'Dự án', 'Dịch vụ', 'Đánh giá', 'Liên hệ'],
           pageHeader: 'Chi tiết dịch vụ',
           crumbHome: 'Trang chủ',
           crumbCurrent: 'Chi tiết dịch vụ',
           footerRights: 'Mọi quyền được bảo lưu',
+          themeLabels: { dark: 'Chế độ tối', light: 'Chế độ sáng' },
+          contactTitle: 'Cần một gói dịch vụ phù hợp?',
+          contactDesc: 'Tôi có thể giúp bạn kết hợp website, vận hành IT, hệ thống, mạng và bảo mật vào một mô hình triển khai thống nhất.',
+          contactBtn: 'Yêu cầu tư vấn',
           services: [
             {
               id: 'website-development',
@@ -339,6 +380,14 @@
       };
 
       const navHrefs = ['index.html#hero', 'index.html#about', 'index.html#resume', 'index.html#portfolio', 'index.html#services', 'index.html#testimonials', 'index.html#contact'];
+      const serviceImages = {
+        'website-development': 'assets/img/services/details/Website-Development.webp',
+        'it-helpdesk': 'assets/img/services/details/helpdesk.webp',
+        'system-administration': 'assets/img/services/details/System-Administrator.jpg',
+        'network-administration': 'assets/img/services/details/administrator-networking.jpg',
+        'penetration-testing': 'assets/img/services/details/pentest.jpg',
+        'maintenance-support': 'assets/img/services.jpg'
+      };
       let currentLang = 'en';
 
       function setNav(labels) {
@@ -384,6 +433,11 @@
         document.getElementById('detail-p1').textContent = selected.p1;
         document.getElementById('detail-p2').textContent = selected.p2;
 
+        const imageEl = document.getElementById('service-image');
+        imageEl.src = serviceImages[selected.id] || 'assets/img/services.jpg';
+        imageEl.alt = selected.navLabel;
+        imageEl.setAttribute('data-service', selected.id);
+
         const ul = document.getElementById('detail-bullets');
         ul.innerHTML = '';
         selected.bullets.forEach((b) => {
@@ -403,11 +457,25 @@
         document.documentElement.lang = currentLang;
         document.title = t.pageTitle;
         setNav(t.nav);
+        document.querySelectorAll('.sitename').forEach((el) => {
+          el.textContent = t.nameDisplay;
+        });
+        document.getElementById('profile-image').alt = t.profileAlt;
 
         document.getElementById('page-title-text').textContent = t.pageHeader;
         document.getElementById('crumb-home').textContent = t.crumbHome;
         document.getElementById('crumb-current').textContent = t.crumbCurrent;
         document.getElementById('footer-rights').textContent = t.footerRights;
+        document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+          button.setAttribute('data-label-dark', t.themeLabels.dark);
+          button.setAttribute('data-label-light', t.themeLabels.light);
+        });
+        if (typeof window.applySiteTheme === 'function') {
+          window.applySiteTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+        }
+        document.getElementById('detail-contact-title').textContent = t.contactTitle;
+        document.getElementById('detail-contact-desc').textContent = t.contactDesc;
+        document.getElementById('detail-contact-btn').textContent = t.contactBtn;
 
         const hash = (window.location.hash || '').replace('#', '');
         renderServiceDetail(hash);
@@ -416,7 +484,9 @@
           btn.classList.toggle('active', btn.dataset.lang === currentLang);
         });
 
-        localStorage.setItem('site_lang', currentLang);
+        if (window.sitePrefs) {
+          window.sitePrefs.set('site_lang', currentLang);
+        }
       }
 
       window.addEventListener('hashchange', () => {
@@ -428,11 +498,15 @@
         btn.addEventListener('click', () => applyLang(btn.dataset.lang));
       });
 
-      applyLang(localStorage.getItem('site_lang') || 'en');
+      applyLang((window.sitePrefs && window.sitePrefs.get('site_lang', 'en')) || 'en');
     })();
   </script>
 
 </body>
 
 </html>
+
+
+
+
 

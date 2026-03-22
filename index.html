@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +15,21 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('site_theme');
+        var resolvedTheme = (storedTheme === 'light' || storedTheme === 'dark')
+          ? storedTheme
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +56,7 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.jpg" alt="Khanh Hoang Vo" class="img-fluid rounded-circle" id="profile-image">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -60,6 +74,12 @@
     <div class="lang-switch text-center" id="lang-switcher">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="vi">VI</button>
+    </div>
+
+    <div class="theme-switch text-center">
+      <button type="button" class="theme-btn" data-theme-toggle data-label-light="Light mode" data-label-dark="Dark mode" aria-label="Toggle color theme" aria-pressed="false">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -103,6 +123,25 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Khanh Hoang Vo</h2>
         <p>I'm <span class="typed" data-typed-items="IT &amp; Cybersecurity Team Lead">IT & Cybersecurity Team Lead</span></p>
+        <div class="hero-actions">
+          <a href="#services" class="btn-hero btn-hero-primary" id="hero-btn-primary">Explore Services</a>
+          <a href="#portfolio" class="btn-hero btn-hero-secondary" id="hero-btn-secondary">View Projects</a>
+          <a href="#contact" class="btn-hero btn-hero-tertiary" id="hero-btn-tertiary">Contact Me</a>
+        </div>
+        <div class="hero-highlights">
+          <div class="hero-highlight">
+            <span class="hero-highlight-value" id="hero-highlight-1-value">24/7</span>
+            <span class="hero-highlight-label" id="hero-highlight-1-label">Support coverage</span>
+          </div>
+          <div class="hero-highlight">
+            <span class="hero-highlight-value" id="hero-highlight-2-value">9</span>
+            <span class="hero-highlight-label" id="hero-highlight-2-label">Core team roles</span>
+          </div>
+          <div class="hero-highlight">
+            <span class="hero-highlight-value" id="hero-highlight-3-value">32</span>
+            <span class="hero-highlight-label" id="hero-highlight-3-label">Clients served</span>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -195,6 +234,48 @@
       </div>
 
     </section><!-- /Stats Section -->
+
+    <section id="process" class="process section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 id="process-title">Delivery Process</h2>
+        <p id="process-desc">A structured workflow that keeps delivery clear, secure, and measurable from kickoff to long-term support.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <article class="process-card h-100">
+              <div class="process-step">01</div>
+              <h3 id="process-card-1-title">Discovery</h3>
+              <p id="process-card-1-desc">We align scope, goals, users, and technical direction before implementation starts.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="process-card h-100">
+              <div class="process-step">02</div>
+              <h3 id="process-card-2-title">Build</h3>
+              <p id="process-card-2-desc">Our team executes with PM, development, testing, and infrastructure coordination.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="process-card h-100">
+              <div class="process-step">03</div>
+              <h3 id="process-card-3-title">Secure</h3>
+              <p id="process-card-3-desc">We validate performance, hardening, access control, and operational readiness.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="process-card h-100">
+              <div class="process-step">04</div>
+              <h3 id="process-card-4-title">Support</h3>
+              <p id="process-card-4-desc">After launch, we continue with maintenance, support, and iterative improvement.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Process Section -->
 
         <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
@@ -361,7 +442,7 @@
 
     </section><!-- /Resume Section -->
 
-        <!-- Portfolio Section -->
+                <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
 
       <!-- Section Title -->
@@ -372,63 +453,51 @@
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4 portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="LCT Visuals website project">
-                <div class="portfolio-info">
-                  <h4>LCT Visuals</h4>
-                  <p>Business website project - lctvisuals.us</p>
-                  <a href="https://lctvisuals.us" target="_blank" rel="noopener noreferrer" title="Visit lctvisuals.us" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="LCT Visuals website project">
+              <div class="portfolio-info">
+                <h4>LCT Visuals</h4>
+                <p>Business website project - lctvisuals.us</p>
+                <a href="portfolio-details.html#lctvisuals" title="Project details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+          </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="BF Productions website project">
-                <div class="portfolio-info">
-                  <h4>BF Productions</h4>
-                  <p>Company website project - bfproductions.co</p>
-                  <a href="https://bfproductions.co" target="_blank" rel="noopener noreferrer" title="Visit bfproductions.co" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="BF Productions website project">
+              <div class="portfolio-info">
+                <h4>BF Productions</h4>
+                <p>Company website project - bfproductions.co</p>
+                <a href="portfolio-details.html#bfproductions" title="Project details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+          </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Cosmetics Store Website">
-                <div class="portfolio-info">
-                  <h4>Cosmetics Store Website</h4>
-                  <p>E-commerce website project for cosmetics.</p>
-                </div>
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/pentest.webp" class="img-fluid" alt="SMB Penetration Testing Project">
+              <div class="portfolio-info">
+                <h4>SMB Penetration Testing</h4>
+                <p>Security assessment and pentest project for an SMB company.</p>
+                <a href="portfolio-details.html#pentest-smb" title="Project details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+          </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Bookstore Website">
-                <div class="portfolio-info">
-                  <h4>Bookstore Website</h4>
-                  <p>E-commerce website project for books.</p>
-                </div>
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/system-network.jpg" class="img-fluid" alt="SMB System and Network Administration Project">
+              <div class="portfolio-info">
+                <h4>SMB System &amp; Network Operations</h4>
+                <p>System hardening and network operation project for an SMB company.</p>
+                <a href="portfolio-details.html#system-network-smb" title="Project details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="Mobile Phone Store Website">
-                <div class="portfolio-info">
-                  <h4>Mobile Phone Store Website</h4>
-                  <p>E-commerce website project for mobile phones.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
+            </div>
+          </div><!-- End Portfolio Item -->
 
         </div>
 
@@ -725,7 +794,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Khanh Hoang Vo</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Khanh Hoang Vo</strong> <span id="footer-rights">All Rights Reserved</span></p>
       </div>
 </div>
 
@@ -753,13 +822,18 @@
 
     <script>
     (function () {
-      const i18n = {
+                  const i18n = {
         en: {
           pageTitle: 'Khanh Hoang Vo | Web, IT & Cybersecurity Services',
+          profileAlt: 'Khanh Hoang Vo',
+          footerRights: 'All Rights Reserved',
+          themeLabels: { dark: 'Dark mode', light: 'Light mode' },
           nav: ['Home', 'About', 'Resume', 'Portfolio', 'Services', 'Testimonials', 'Contact'],
           nameDisplay: 'Khanh Hoang Vo',
           heroPrefix: "I'm ",
           heroRole: 'IT & Cybersecurity Team Lead',
+          heroButtons: ['Explore Services', 'View Projects', 'Contact Me'],
+          heroHighlights: ['Support coverage', 'Core team roles', 'Clients served'],
 
           aboutTitle: 'About',
           aboutDesc: 'I lead a multidisciplinary team delivering end-to-end IT and cybersecurity services for businesses.',
@@ -770,6 +844,15 @@
 
           statsLabels: ['Happy Clients', 'Projects', 'Support Coverage', 'Team Roles'],
           statsSub: ['trusted by businesses and founders', 'completed website projects', '24/7 maintenance and operations support', 'PM, BA, Dev, Tester, System, Network, Security'],
+
+          processTitle: 'Delivery Process',
+          processDesc: 'A structured workflow that keeps delivery clear, secure, and measurable from kickoff to long-term support.',
+          processCards: [
+            ['Discovery', 'We align scope, goals, users, and technical direction before implementation starts.'],
+            ['Build', 'Our team executes with PM, development, testing, and infrastructure coordination.'],
+            ['Secure', 'We validate performance, hardening, access control, and operational readiness.'],
+            ['Support', 'After launch, we continue with maintenance, support, and iterative improvement.']
+          ],
 
           skillsTitle: 'Skills',
           skillsDesc: 'Core capabilities across software engineering, IT infrastructure, and cybersecurity services.',
@@ -837,86 +920,100 @@
           sendBtn: 'Send Message'
         },
         vi: {
-          pageTitle: 'Võ Hoàng Khanh | Dịch vụ Web, IT & An ninh mạng',
-          nav: ['Trang chủ', 'Giới thiệu', 'Hồ sơ', 'Dự án', 'Dịch vụ', 'Đánh giá', 'Liên hệ'],
-          nameDisplay: 'Võ Hoàng Khanh',
-          heroPrefix: 'Tôi là ',
-          heroRole: 'Trưởng nhóm IT & An ninh mạng',
+          pageTitle: 'V\u00f5 Ho\u00e0ng Khanh | D\u1ecbch v\u1ee5 Web, IT & An ninh m\u1ea1ng',
+          profileAlt: 'V\u00f5 Ho\u00e0ng Khanh',
+          footerRights: 'M\u1ecdi quy\u1ec1n \u0111\u01b0\u1ee3c b\u1ea3o l\u01b0u',
+          themeLabels: { dark: 'Ch\u1ebf \u0111\u1ed9 t\u1ed1i', light: 'Ch\u1ebf \u0111\u1ed9 s\u00e1ng' },
+          nav: ['Trang ch\u1ee7', 'Gi\u1edbi thi\u1ec7u', 'H\u1ed3 s\u01a1', 'D\u1ef1 \u00e1n', 'D\u1ecbch v\u1ee5', '\u0110\u00e1nh gi\u00e1', 'Li\u00ean h\u1ec7'],
+          nameDisplay: 'V\u00f5 Ho\u00e0ng Khanh',
+          heroPrefix: 'T\u00f4i l\u00e0 ',
+          heroRole: 'Tr\u01b0\u1edfng nh\u00f3m IT & An ninh m\u1ea1ng',
+          heroButtons: ['Xem d\u1ecbch v\u1ee5', 'Xem d\u1ef1 \u00e1n', 'Li\u00ean h\u1ec7'],
+          heroHighlights: ['H\u1ed7 tr\u1ee3 24/7', 'Vai tr\u00f2 \u0111\u1ed9i ng\u0169', 'Kh\u00e1ch h\u00e0ng \u0111\u00e3 ph\u1ee5c v\u1ee5'],
 
-          aboutTitle: 'Giới thiệu',
-          aboutDesc: 'Tôi dẫn dắt đội ngũ đa chuyên môn, cung cấp trọn gói dịch vụ IT và an ninh mạng cho doanh nghiệp.',
-          aboutRoleTitle: 'Trưởng nhóm - Giải pháp IT, Bảo mật & Website.',
-          aboutItalic: 'Đội ngũ của tôi gồm PM, BA, Developer, Tester, System, Network và Security.',
-          aboutLabels: ['Ngày sinh:', 'Địa chỉ:', 'Di động:', 'Số dự án:', 'Vai trò:', 'Email:', 'Dự án tiêu biểu:', 'Freelance:'],
-          aboutValues: ['28/02/2002', 'Linh Trung, Thủ Đức', '+84 33.663.5527', '5', 'Trưởng nhóm', 'khanhvh2728@gmail.com', 'lctvisuals.us, bfproductions.co', 'Sẵn sàng'],
+          aboutTitle: 'Gi\u1edbi thi\u1ec7u',
+          aboutDesc: 'T\u00f4i d\u1eabn d\u1eaft \u0111\u1ed9i ng\u0169 \u0111a chuy\u00ean m\u00f4n, cung c\u1ea5p tr\u1ecdn g\u00f3i d\u1ecbch v\u1ee5 IT v\u00e0 an ninh m\u1ea1ng cho doanh nghi\u1ec7p.',
+          aboutRoleTitle: 'Tr\u01b0\u1edfng nh\u00f3m - Gi\u1ea3i ph\u00e1p IT, B\u1ea3o m\u1eadt & Website.',
+          aboutItalic: '\u0110\u1ed9i ng\u0169 c\u1ee7a t\u00f4i g\u1ed3m PM, BA, Developer, Tester, System, Network v\u00e0 Security.',
+          aboutLabels: ['Ng\u00e0y sinh:', '\u0110\u1ecba ch\u1ec9:', 'Di \u0111\u1ed9ng:', 'S\u1ed1 d\u1ef1 \u00e1n:', 'Vai tr\u00f2:', 'Email:', 'D\u1ef1 \u00e1n ti\u00eau bi\u1ec3u:', 'Freelance:'],
+          aboutValues: ['28/02/2002', 'Linh Trung, Th\u1ee7 \u0110\u1ee9c', '+84 33.663.5527', '5', 'Tr\u01b0\u1edfng nh\u00f3m', 'khanhvh2728@gmail.com', 'lctvisuals.us, bfproductions.co', 'S\u1eb5n s\u00e0ng'],
 
-          statsLabels: ['Khách hàng', 'Dự án', 'Hỗ trợ', 'Nhân sự đội ngũ'],
-          statsSub: ['doanh nghiệp và founder tin tưởng', 'website đã hoàn thành', 'bảo trì và vận hành 24/7', 'PM, BA, Dev, Tester, System, Network, Security'],
+          statsLabels: ['Kh\u00e1ch h\u00e0ng', 'D\u1ef1 \u00e1n', 'H\u1ed7 tr\u1ee3', 'Nh\u00e2n s\u1ef1 \u0111\u1ed9i ng\u0169'],
+          statsSub: ['doanh nghi\u1ec7p v\u00e0 founder tin t\u01b0\u1edfng', 'website \u0111\u00e3 ho\u00e0n th\u00e0nh', 'b\u1ea3o tr\u00ec v\u00e0 v\u1eadn h\u00e0nh 24/7', 'PM, BA, Dev, Tester, System, Network, Security'],
 
-          skillsTitle: 'Kỹ năng',
-          skillsDesc: 'Năng lực cốt lõi về lập trình, hạ tầng IT và an ninh mạng.',
-          skills: ['Lập trình Python', 'Quản trị hệ thống', 'Quản trị mạng', 'Vận hành bảo mật', 'Kiểm thử xâm nhập', 'Bảo trì & Hỗ trợ 24/7'],
+          processTitle: 'Quy tr\u00ecnh tri\u1ec3n khai',
+          processDesc: 'Quy tr\u00ecnh l\u00e0m vi\u1ec7c r\u00f5 r\u00e0ng gi\u00fap d\u1ef1 \u00e1n \u0111\u01b0\u1ee3c tri\u1ec3n khai ch\u1eb7t ch\u1ebd, an to\u00e0n v\u00e0 d\u1ec5 ki\u1ec3m so\u00e1t t\u1eeb l\u00fac b\u1eaft \u0111\u1ea7u \u0111\u1ebfn giai \u0111o\u1ea1n v\u1eadn h\u00e0nh.',
+          processCards: [
+            ['Kh\u1ea3o s\u00e1t', 'Ch\u00fang t\u00f4i l\u00e0m r\u00f5 ph\u1ea1m vi, m\u1ee5c ti\u00eau, ng\u01b0\u1eddi d\u00f9ng v\u00e0 \u0111\u1ecbnh h\u01b0\u1edbng k\u1ef9 thu\u1eadt tr\u01b0\u1edbc khi tri\u1ec3n khai.'],
+            ['Tri\u1ec3n khai', '\u0110\u1ed9i ng\u0169 ph\u1ed1i h\u1ee3p gi\u1eefa PM, development, testing v\u00e0 h\u1ea1 t\u1ea7ng \u0111\u1ec3 \u0111\u01b0a d\u1ef1 \u00e1n v\u00e0o th\u1ef1c t\u1ebf.'],
+            ['Ki\u1ec3m so\u00e1t', 'Ch\u00fang t\u00f4i x\u00e1c th\u1ef1c hi\u1ec7u n\u0103ng, hardening, ph\u00e2n quy\u1ec1n v\u00e0 \u0111\u1ed9 s\u1eb5n s\u00e0ng v\u1eadn h\u00e0nh.'],
+            ['H\u1ed7 tr\u1ee3', 'Sau khi go-live, ch\u00fang t\u00f4i ti\u1ebfp t\u1ee5c b\u1ea3o tr\u00ec, h\u1ed7 tr\u1ee3 v\u00e0 c\u1ea3i ti\u1ebfn theo th\u1ef1c t\u1ebf s\u1eed d\u1ee5ng.']
+          ],
 
-          resumeTitle: 'Hồ sơ',
-          resumeDesc: 'Tôi dẫn dắt đội ngũ liên chức năng triển khai website, vận hành IT, hệ thống, mạng và bảo mật.',
-          resumeColTitles: ['Tóm tắt', 'Học vấn', 'Kinh nghiệm chuyên môn'],
-          summaryText: 'Trưởng nhóm có kinh nghiệm thực chiến trong triển khai website, hạ tầng IT và giải pháp an ninh mạng cùng đội ngũ đa vai trò.',
+          skillsTitle: 'K\u1ef9 n\u0103ng',
+          skillsDesc: 'N\u0103ng l\u1ef1c c\u1ed1t l\u00f5i v\u1ec1 l\u1eadp tr\u00ecnh, h\u1ea1 t\u1ea7ng IT v\u00e0 an ninh m\u1ea1ng.',
+          skills: ['L\u1eadp tr\u00ecnh Python', 'Qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng', 'Qu\u1ea3n tr\u1ecb m\u1ea1ng', 'V\u1eadn h\u00e0nh b\u1ea3o m\u1eadt', 'Ki\u1ec3m th\u1eed x\u00e2m nh\u1eadp', 'B\u1ea3o tr\u00ec & H\u1ed7 tr\u1ee3 24/7'],
+
+          resumeTitle: 'H\u1ed3 s\u01a1',
+          resumeDesc: 'T\u00f4i d\u1eabn d\u1eaft \u0111\u1ed9i ng\u0169 li\u00ean ch\u1ee9c n\u0103ng tri\u1ec3n khai website, v\u1eadn h\u00e0nh IT, h\u1ec7 th\u1ed1ng, m\u1ea1ng v\u00e0 b\u1ea3o m\u1eadt.',
+          resumeColTitles: ['T\u00f3m t\u1eaft', 'H\u1ecdc v\u1ea5n', 'Kinh nghi\u1ec7m chuy\u00ean m\u00f4n'],
+          summaryText: 'Tr\u01b0\u1edfng nh\u00f3m c\u00f3 kinh nghi\u1ec7m th\u1ef1c chi\u1ebfn trong tri\u1ec3n khai website, h\u1ea1 t\u1ea7ng IT v\u00e0 gi\u1ea3i ph\u00e1p an ninh m\u1ea1ng c\u00f9ng \u0111\u1ed9i ng\u0169 \u0111a vai tr\u00f2.',
           summaryBullets: [
-            'Trưởng nhóm cho các vai trò PM, BA, Dev, Tester, System, Network, Security',
-            'Dịch vụ cốt lõi: Website, IT Helpdesk, Hệ thống, Mạng, Pentest và hỗ trợ 24/7',
-            'Dự án tiêu biểu: lctvisuals.us, bfproductions.co'
+            'Tr\u01b0\u1edfng nh\u00f3m cho c\u00e1c vai tr\u00f2 PM, BA, Dev, Tester, System, Network, Security',
+            'D\u1ecbch v\u1ee5 c\u1ed1t l\u00f5i: Website, IT Helpdesk, H\u1ec7 th\u1ed1ng, M\u1ea1ng, Pentest v\u00e0 h\u1ed7 tr\u1ee3 24/7',
+            'D\u1ef1 \u00e1n ti\u00eau bi\u1ec3u: lctvisuals.us, bfproductions.co'
           ],
 
-          portfolioTitle: 'Dự án',
-          portfolioDesc: 'Một số dự án tiêu biểu do đội ngũ của chúng tôi triển khai.',
+          portfolioTitle: 'D\u1ef1 \u00e1n',
+          portfolioDesc: 'M\u1ed9t s\u1ed1 d\u1ef1 \u00e1n ti\u00eau bi\u1ec3u do \u0111\u1ed9i ng\u0169 c\u1ee7a ch\u00fang t\u00f4i tri\u1ec3n khai.',
 
-          servicesTitle: 'Dịch vụ',
-          servicesDesc: 'Đội ngũ của chúng tôi cung cấp dịch vụ IT và an ninh mạng trọn gói do Khanh Hoang Vo dẫn dắt.',
-          serviceTitles: ['Lập trình website', 'IT Helpdesk', 'Quản trị hệ thống', 'Quản trị mạng', 'Kiểm thử xâm nhập', 'Bảo trì & Hỗ trợ 24/7'],
+          servicesTitle: 'D\u1ecbch v\u1ee5',
+          servicesDesc: '\u0110\u1ed9i ng\u0169 c\u1ee7a ch\u00fang t\u00f4i cung c\u1ea5p d\u1ecbch v\u1ee5 IT v\u00e0 an ninh m\u1ea1ng tr\u1ecdn g\u00f3i do Khanh Hoang Vo d\u1eabn d\u1eaft.',
+          serviceTitles: ['L\u1eadp tr\u00ecnh website', 'IT Helpdesk', 'Qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng', 'Qu\u1ea3n tr\u1ecb m\u1ea1ng', 'Ki\u1ec3m th\u1eed x\u00e2m nh\u1eadp', 'B\u1ea3o tr\u00ec & H\u1ed7 tr\u1ee3 24/7'],
           serviceDescs: [
-            'Website doanh nghiệp, landing page và nền tảng web có khả năng mở rộng, tối ưu hiệu năng, chuẩn SEO và tập trung chuyển đổi.',
-            'Hỗ trợ IT hằng ngày, xử lý sự cố nhanh, hỗ trợ người dùng cuối và quản lý ticket theo quy trình rõ ràng.',
-            'Vận hành hệ thống máy chủ, quản lý phân quyền, chiến lược backup và đảm bảo tính ổn định liên tục của dịch vụ.',
-            'Cấu hình hạ tầng mạng, kiểm soát chính sách bảo mật, phân đoạn mạng và tối ưu hiệu năng kết nối.',
-            'Đánh giá bảo mật và triển khai pentest với báo cáo ưu tiên lỗ hổng, lộ trình khắc phục và hỗ trợ xác minh sau fix.',
-            'Bảo trì chủ động, giám sát liên tục, cập nhật bản vá và hỗ trợ kỹ thuật 24/7 theo cam kết SLA.'
+            'Website doanh nghi\u1ec7p, landing page v\u00e0 n\u1ec1n t\u1ea3ng web c\u00f3 kh\u1ea3 n\u0103ng m\u1edf r\u1ed9ng, t\u1ed1i \u01b0u hi\u1ec7u n\u0103ng, chu\u1ea9n SEO v\u00e0 t\u1eadp trung chuy\u1ec3n \u0111\u1ed5i.',
+            'H\u1ed7 tr\u1ee3 IT h\u1eb1ng ng\u00e0y, x\u1eed l\u00fd s\u1ef1 c\u1ed1 nhanh, h\u1ed7 tr\u1ee3 ng\u01b0\u1eddi d\u00f9ng cu\u1ed1i v\u00e0 qu\u1ea3n l\u00fd ticket theo quy tr\u00ecnh r\u00f5 r\u00e0ng.',
+            'V\u1eadn h\u00e0nh h\u1ec7 th\u1ed1ng m\u00e1y ch\u1ee7, qu\u1ea3n l\u00fd ph\u00e2n quy\u1ec1n, chi\u1ebfn l\u01b0\u1ee3c backup v\u00e0 \u0111\u1ea3m b\u1ea3o t\u00ednh \u1ed5n \u0111\u1ecbnh li\u00ean t\u1ee5c c\u1ee7a d\u1ecbch v\u1ee5.',
+            'C\u1ea5u h\u00ecnh h\u1ea1 t\u1ea7ng m\u1ea1ng, ki\u1ec3m so\u00e1t ch\u00ednh s\u00e1ch b\u1ea3o m\u1eadt, ph\u00e2n \u0111o\u1ea1n m\u1ea1ng v\u00e0 t\u1ed1i \u01b0u hi\u1ec7u n\u0103ng k\u1ebft n\u1ed1i.',
+            '\u0110\u00e1nh gi\u00e1 b\u1ea3o m\u1eadt v\u00e0 tri\u1ec3n khai pentest v\u1edbi b\u00e1o c\u00e1o \u01b0u ti\u00ean l\u1ed7 h\u1ed5ng, l\u1ed9 tr\u00ecnh kh\u1eafc ph\u1ee5c v\u00e0 h\u1ed7 tr\u1ee3 x\u00e1c minh sau fix.',
+            'B\u1ea3o tr\u00ec ch\u1ee7 \u0111\u1ed9ng, gi\u00e1m s\u00e1t li\u00ean t\u1ee5c, c\u1eadp nh\u1eadt b\u1ea3n v\u00e1 v\u00e0 h\u1ed7 tr\u1ee3 k\u1ef9 thu\u1eadt 24/7 theo cam k\u1ebft SLA.'
           ],
 
-          testiTitle: 'Đánh giá khách hàng',
-          testiDesc: 'Phản hồi từ các dự án website và hạ tầng đã triển khai.',
+          testiTitle: '\u0110\u00e1nh gi\u00e1 kh\u00e1ch h\u00e0ng',
+          testiDesc: 'Ph\u1ea3n h\u1ed3i t\u1eeb c\u00e1c d\u1ef1 \u00e1n website v\u00e0 h\u1ea1 t\u1ea7ng \u0111\u00e3 tri\u1ec3n khai.',
           testiItems: [
             {
-              quote: 'Khanh và đội ngũ triển khai website studio rất bài bản và chuyên nghiệp. Tiến độ nhanh, UX gọn, chất lượng kỹ thuật tốt.',
-              name: 'Khách hàng startup',
-              role: 'Chủ productions'
+              quote: 'Khanh v\u00e0 \u0111\u1ed9i ng\u0169 tri\u1ec3n khai website studio r\u1ea5t b\u00e0i b\u1ea3n v\u00e0 chuy\u00ean nghi\u1ec7p. Ti\u1ebfn \u0111\u1ed9 nhanh, UX g\u1ecdn, ch\u1ea5t l\u01b0\u1ee3ng k\u1ef9 thu\u1eadt t\u1ed1t.',
+              name: 'Kh\u00e1ch h\u00e0ng startup',
+              role: 'Ch\u1ee7 productions'
             },
             {
-              quote: 'Từ lúc lên kế hoạch đến bàn giao, Khanh trao đổi rất rõ ràng và chủ động. Website studio hiện tại đẹp và vận hành ổn định.',
-              name: 'Khách hàng startup',
-              role: 'Chủ studio'
+              quote: 'T\u1eeb l\u00fac l\u00ean k\u1ebf ho\u1ea1ch \u0111\u1ebfn b\u00e0n giao, Khanh trao \u0111\u1ed5i r\u1ea5t r\u00f5 r\u00e0ng v\u00e0 ch\u1ee7 \u0111\u1ed9ng. Website studio hi\u1ec7n t\u1ea1i \u0111\u1eb9p v\u00e0 v\u1eadn h\u00e0nh \u1ed5n \u0111\u1ecbnh.',
+              name: 'Kh\u00e1ch h\u00e0ng startup',
+              role: 'Ch\u1ee7 studio'
             },
             {
-              quote: 'Kết quả cuối cùng hiển thị chuyên nghiệp trên cả desktop và mobile. Hiệu năng và trải nghiệm người dùng cải thiện rõ rệt.',
-              name: 'Khách hàng thương hiệu cá nhân',
-              role: 'Nhà sáng tạo nội dung'
+              quote: 'K\u1ebft qu\u1ea3 cu\u1ed1i c\u00f9ng hi\u1ec3n th\u1ecb chuy\u00ean nghi\u1ec7p tr\u00ean c\u1ea3 desktop v\u00e0 mobile. Hi\u1ec7u n\u0103ng v\u00e0 tr\u1ea3i nghi\u1ec7m ng\u01b0\u1eddi d\u00f9ng c\u1ea3i thi\u1ec7n r\u00f5 r\u1ec7t.',
+              name: 'Kh\u00e1ch h\u00e0ng th\u01b0\u01a1ng hi\u1ec7u c\u00e1 nh\u00e2n',
+              role: 'Nh\u00e0 s\u00e1ng t\u1ea1o n\u1ed9i dung'
             },
             {
-              quote: 'Khả năng sở hữu dự án và sự chỉn chu trong từng chi tiết rất tốt. Tôi đánh giá cao quy trình làm việc và hỗ trợ sau bàn giao.',
-              name: 'Khách hàng startup',
-              role: 'Trưởng vận hành'
+              quote: 'Kh\u1ea3 n\u0103ng s\u1edf h\u1eefu d\u1ef1 \u00e1n v\u00e0 s\u1ef1 ch\u1ec9n chu trong t\u1eebng chi ti\u1ebft r\u1ea5t t\u1ed1t. T\u00f4i \u0111\u00e1nh gi\u00e1 cao quy tr\u00ecnh l\u00e0m vi\u1ec7c v\u00e0 h\u1ed7 tr\u1ee3 sau b\u00e0n giao.',
+              name: 'Kh\u00e1ch h\u00e0ng startup',
+              role: 'Tr\u01b0\u1edfng v\u1eadn h\u00e0nh'
             },
             {
-              quote: 'Từ ý tưởng đến triển khai đều được xử lý chuyên nghiệp. Rất phù hợp cho các dự án phát triển website.',
-              name: 'Đối tác agency',
-              role: 'Trưởng dự án'
+              quote: 'T\u1eeb \u00fd t\u01b0\u1edfng \u0111\u1ebfn tri\u1ec3n khai \u0111\u1ec1u \u0111\u01b0\u1ee3c x\u1eed l\u00fd chuy\u00ean nghi\u1ec7p. R\u1ea5t ph\u00f9 h\u1ee3p cho c\u00e1c d\u1ef1 \u00e1n ph\u00e1t tri\u1ec3n website.',
+              name: '\u0110\u1ed1i t\u00e1c agency',
+              role: 'Tr\u01b0\u1edfng d\u1ef1 \u00e1n'
             }
           ],
 
-          contactTitle: 'Liên hệ',
-          contactDesc: 'Liên hệ đội ngũ của chúng tôi để được tư vấn dịch vụ website, IT helpdesk, quản trị hệ thống, quản trị mạng, pentest và hỗ trợ 24/7.',
-          contactLabels: ['Địa chỉ', 'Điện thoại', 'Email'],
-          formLabels: ['Họ và tên', 'Email', 'Tiêu đề', 'Nội dung'],
-          sendBtn: 'Gửi tin nhắn'
+          contactTitle: 'Li\u00ean h\u1ec7',
+          contactDesc: 'Li\u00ean h\u1ec7 \u0111\u1ed9i ng\u0169 c\u1ee7a ch\u00fang t\u00f4i \u0111\u1ec3 \u0111\u01b0\u1ee3c t\u01b0 v\u1ea5n d\u1ecbch v\u1ee5 website, IT helpdesk, qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng, qu\u1ea3n tr\u1ecb m\u1ea1ng, pentest v\u00e0 h\u1ed7 tr\u1ee3 24/7.',
+          contactLabels: ['\u0110\u1ecba ch\u1ec9', '\u0110i\u1ec7n tho\u1ea1i', 'Email'],
+          formLabels: ['H\u1ecd v\u00e0 t\u00ean', 'Email', 'Ti\u00eau \u0111\u1ec1', 'N\u1ed9i dung'],
+          sendBtn: 'G\u1eedi tin nh\u1eafn'
         }
       };
 
@@ -981,26 +1078,26 @@
         vi: {
           education: [
             {
-              title: 'Cử nhân An toàn thông tin',
+              title: 'C\u1eed nh\u00e2n An to\u00e0n th\u00f4ng tin',
               date: '10/2020 - 03/2025',
-              school: 'Trường Đại học Công nghệ Thông tin - ĐHQG TP.HCM',
-              desc: 'Đã hoàn thành chương trình Cử nhân An toàn thông tin tại Trường Đại học Công nghệ Thông tin - ĐHQG TP.HCM. GPA: 3.22/4.0.'
+              school: 'Tr\u01b0\u1eddng \u0110\u1ea1i h\u1ecdc C\u00f4ng ngh\u1ec7 Th\u00f4ng tin - \u0110HQG TP.HCM',
+              desc: '\u0110\u00e3 ho\u00e0n th\u00e0nh ch\u01b0\u01a1ng tr\u00ecnh C\u1eed nh\u00e2n An to\u00e0n th\u00f4ng tin t\u1ea1i Tr\u01b0\u1eddng \u0110\u1ea1i h\u1ecdc C\u00f4ng ngh\u1ec7 Th\u00f4ng tin - \u0110HQG TP.HCM. GPA: 3.22/4.0.'
             },
             {
-              title: 'Thạc sĩ An toàn thông tin',
+              title: 'Th\u1ea1c s\u0129 An to\u00e0n th\u00f4ng tin',
               date: '12/2025 - 12/2027',
-              school: 'Trường Đại học Công nghệ Thông tin - ĐHQG TP.HCM',
-              desc: 'Đang theo học chương trình Thạc sĩ An toàn thông tin, tập trung vào kiến trúc bảo mật nâng cao, ứng phó sự cố và vận hành an ninh mạng doanh nghiệp.'
+              school: 'Tr\u01b0\u1eddng \u0110\u1ea1i h\u1ecdc C\u00f4ng ngh\u1ec7 Th\u00f4ng tin - \u0110HQG TP.HCM',
+              desc: '\u0110ang theo h\u1ecdc ch\u01b0\u01a1ng tr\u00ecnh Th\u1ea1c s\u0129 An to\u00e0n th\u00f4ng tin, t\u1eadp trung v\u00e0o ki\u1ebfn tr\u00fac b\u1ea3o m\u1eadt n\u00e2ng cao, \u1ee9ng ph\u00f3 s\u1ef1 c\u1ed1 v\u00e0 v\u1eadn h\u00e0nh an ninh m\u1ea1ng doanh nghi\u1ec7p.'
             }
           ],
           experience: [
             {
-              title: 'Thực tập sinh - Tư vấn An ninh',
+              title: 'Th\u1ef1c t\u1eadp sinh - T\u01b0 v\u1ea5n An ninh',
               date: '06/2023 - 12/2023',
               company: 'Vietnam Cyberspace Security Technology JSC (VNCS)',
               bullets: [
-                'Tham gia nghiên cứu và triển khai giải pháp bảo mật với quy trình liên quan Splunk.',
-                'Theo sát quy trình triển khai: phân tích yêu cầu, cài đặt, cấu hình và phân tích dữ liệu.'
+                'Tham gia nghi\u00ean c\u1ee9u v\u00e0 tri\u1ec3n khai gi\u1ea3i ph\u00e1p b\u1ea3o m\u1eadt v\u1edbi quy tr\u00ecnh li\u00ean quan Splunk.',
+                'Theo s\u00e1t quy tr\u00ecnh tri\u1ec3n khai: ph\u00e2n t\u00edch y\u00eau c\u1ea7u, c\u00e0i \u0111\u1eb7t, c\u1ea5u h\u00ecnh v\u00e0 ph\u00e2n t\u00edch d\u1eef li\u1ec7u.'
               ]
             },
             {
@@ -1008,29 +1105,29 @@
               date: '06/2024 - 02/2026',
               company: 'DTG CORP',
               bullets: [
-                'Nghiên cứu, tư vấn và đề xuất các giải pháp bảo mật gồm PAM, EDR, XDR và NAC.',
-                'Soạn tài liệu kỹ thuật, mô tả giải pháp và hồ sơ đề xuất cho dự án.',
-                'Hỗ trợ đào tạo nội bộ và chuyển giao kiến thức cho đối tác.'
+                'Nghi\u00ean c\u1ee9u, t\u01b0 v\u1ea5n v\u00e0 \u0111\u1ec1 xu\u1ea5t c\u00e1c gi\u1ea3i ph\u00e1p b\u1ea3o m\u1eadt g\u1ed3m PAM, EDR, XDR v\u00e0 NAC.',
+                'So\u1ea1n t\u00e0i li\u1ec7u k\u1ef9 thu\u1eadt, m\u00f4 t\u1ea3 gi\u1ea3i ph\u00e1p v\u00e0 h\u1ed3 s\u01a1 \u0111\u1ec1 xu\u1ea5t cho d\u1ef1 \u00e1n.',
+                'H\u1ed7 tr\u1ee3 \u0111\u00e0o t\u1ea1o n\u1ed9i b\u1ed9 v\u00e0 chuy\u1ec3n giao ki\u1ebfn th\u1ee9c cho \u0111\u1ed1i t\u00e1c.'
               ]
             },
             {
-              title: 'Chuyên gia Tư vấn Giải pháp',
-              date: '02/2026 - Hiện tại',
+              title: 'Chuy\u00ean gia T\u01b0 v\u1ea5n Gi\u1ea3i ph\u00e1p',
+              date: '02/2026 - Hi\u1ec7n t\u1ea1i',
               company: 'CMC Technology & Solution',
               bullets: [
-                'Tư vấn và thiết kế kiến trúc bảo mật doanh nghiệp theo yêu cầu và mức độ rủi ro của khách hàng.',
-                'Triển khai và tối ưu giải pháp EDR/XDR, tập trung thực chiến trên công nghệ Palo Alto.',
-                'Hỗ trợ presales kỹ thuật, PoC và kế hoạch triển khai cho các sản phẩm Check Point cùng các giải pháp an ninh mạng liên quan.'
+                'T\u01b0 v\u1ea5n v\u00e0 thi\u1ebft k\u1ebf ki\u1ebfn tr\u00fac b\u1ea3o m\u1eadt doanh nghi\u1ec7p theo y\u00eau c\u1ea7u v\u00e0 m\u1ee9c \u0111\u1ed9 r\u1ee7i ro c\u1ee7a kh\u00e1ch h\u00e0ng.',
+                'Tri\u1ec3n khai v\u00e0 t\u1ed1i \u01b0u gi\u1ea3i ph\u00e1p EDR/XDR, t\u1eadp trung th\u1ef1c chi\u1ebfn tr\u00ean c\u00f4ng ngh\u1ec7 Palo Alto.',
+                'H\u1ed7 tr\u1ee3 presales k\u1ef9 thu\u1eadt, PoC v\u00e0 k\u1ebf ho\u1ea1ch tri\u1ec3n khai cho c\u00e1c s\u1ea3n ph\u1ea9m Check Point c\u00f9ng c\u00e1c gi\u1ea3i ph\u00e1p an ninh m\u1ea1ng li\u00ean quan.'
               ]
             },
             {
-              title: 'Trưởng nhóm đa chuyên môn - PM & Quản lý dự án',
-              date: '2023 - Hiện tại',
-              company: 'Đội ngũ Dịch vụ Web & IT Freelancer',
+              title: 'Tr\u01b0\u1edfng nh\u00f3m \u0111a chuy\u00ean m\u00f4n - PM & Qu\u1ea3n l\u00fd d\u1ef1 \u00e1n',
+              date: '2023 - Hi\u1ec7n t\u1ea1i',
+              company: '\u0110\u1ed9i ng\u0169 D\u1ecbch v\u1ee5 Web & IT Freelancer',
               bullets: [
-                'Dẫn dắt đội ngũ đa chuyên môn gồm PM, BA, Developer, Tester, System, Network và Security để triển khai dự án.',
-                'Cung cấp dịch vụ trọn gói gồm lập trình website, IT helpdesk, quản trị hệ thống, quản trị mạng, pentest và bảo trì - hỗ trợ 24/7.',
-                'Quản lý kế hoạch triển khai, giao tiếp khách hàng và kiểm soát chất lượng, đồng thời hoàn thành 5 dự án, tiêu biểu: lctvisuals.us và bfproductions.co.'
+                'D\u1eabn d\u1eaft \u0111\u1ed9i ng\u0169 \u0111a chuy\u00ean m\u00f4n g\u1ed3m PM, BA, Developer, Tester, System, Network v\u00e0 Security \u0111\u1ec3 tri\u1ec3n khai d\u1ef1 \u00e1n.',
+                'Cung c\u1ea5p d\u1ecbch v\u1ee5 tr\u1ecdn g\u00f3i g\u1ed3m l\u1eadp tr\u00ecnh website, IT helpdesk, qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng, qu\u1ea3n tr\u1ecb m\u1ea1ng, pentest v\u00e0 b\u1ea3o tr\u00ec - h\u1ed7 tr\u1ee3 24/7.',
+                'Qu\u1ea3n l\u00fd k\u1ebf ho\u1ea1ch tri\u1ec3n khai, giao ti\u1ebfp kh\u00e1ch h\u00e0ng v\u00e0 ki\u1ec3m so\u00e1t ch\u1ea5t l\u01b0\u1ee3ng, \u0111\u1ed3ng th\u1eddi ho\u00e0n th\u00e0nh 5 d\u1ef1 \u00e1n, ti\u00eau bi\u1ec3u: lctvisuals.us v\u00e0 bfproductions.co.'
               ]
             }
           ]
@@ -1065,7 +1162,24 @@
         document.title = t.pageTitle;
 
         setNav(t.nav);
-        setText('.sitename', t.nameDisplay);
+        document.querySelectorAll('.sitename').forEach((el) => {
+          el.textContent = t.nameDisplay;
+        });
+        document.getElementById('profile-image').alt = t.profileAlt;
+        document.getElementById('footer-rights').textContent = t.footerRights;
+        document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+          button.setAttribute('data-label-dark', t.themeLabels.dark);
+          button.setAttribute('data-label-light', t.themeLabels.light);
+        });
+        if (typeof window.applySiteTheme === 'function') {
+          window.applySiteTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+        }
+        setText('#hero-btn-primary', t.heroButtons[0]);
+        setText('#hero-btn-secondary', t.heroButtons[1]);
+        setText('#hero-btn-tertiary', t.heroButtons[2]);
+        setText('#hero-highlight-1-label', t.heroHighlights[0]);
+        setText('#hero-highlight-2-label', t.heroHighlights[1]);
+        setText('#hero-highlight-3-label', t.heroHighlights[2]);
         setText('#hero .container h2', t.nameDisplay);
         setText('#resume .resume-item.pb-0 h4', t.nameDisplay);
 
@@ -1099,6 +1213,13 @@
 
         setListText('.stats .stats-item p strong', t.statsLabels);
         setListText('.stats .stats-item p span', t.statsSub);
+
+        setText('#process-title', t.processTitle);
+        setText('#process-desc', t.processDesc);
+        t.processCards.forEach((card, i) => {
+          setText(`#process-card-${i + 1}-title`, card[0]);
+          setText(`#process-card-${i + 1}-desc`, card[1]);
+        });
 
         setText('#skills .section-title h2', t.skillsTitle);
         setText('#skills .section-title p', t.skillsDesc);
@@ -1170,19 +1291,29 @@
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        localStorage.setItem('site_lang', lang);
+        if (window.sitePrefs) {
+          window.sitePrefs.set('site_lang', lang);
+        }
       };
 
       document.querySelectorAll('.lang-btn').forEach((btn) => {
         btn.addEventListener('click', () => applyLang(btn.dataset.lang));
       });
 
-      applyLang(localStorage.getItem('site_lang') || 'en');
+      applyLang((window.sitePrefs && window.sitePrefs.get('site_lang', 'en')) || 'en');
     })();
   </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
 
 
 
